@@ -3,14 +3,12 @@ How to run layeredge light node on vps
 
 Follow these steps to set up and run your LayerEdge CLI Light Node efficiently.
 
-### Step 1: Clone the Light Node Repository
+### Step 1: Install Required Dependencies
 
 ```
-git clone https://github.com/Layer-Edge/light-node.git
-cd light-node
+sudo apt update && sudo apt upgrade
+sudo apt install nano 
 ```
-
-### Step 2: Install Required Dependencies
 
 ### Install Go
 ```
@@ -32,9 +30,20 @@ Risc0 Toolchain: If not installed, run:
 curl -L https://risczero.com/install | bash && rzup install
 ```
 
+### Step 1: Clone the Light Node Repository
+
+```
+git clone https://github.com/Layer-Edge/light-node.git
+cd light-node
+```
+
 ### Step 3: Configure Environment Variables
 
 Set up the required environment variables in your terminal session or add them to a .env file:
+
+```
+nano .env
+```
 
 ```
 export GRPC_URL=34.31.74.109:9090
