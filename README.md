@@ -54,6 +54,8 @@ export POINTS_API=http://127.0.0.1:8080
 export PRIVATE_KEY='cli-node-private-key'
 ```
 
+Replace your privatkey
+
 ### Step 4: Start the Merkle Service
 
 Before running the Light Node, start the Merkle service:
