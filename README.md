@@ -46,7 +46,7 @@ Get powerful VPS solutions with these direct links:
 
 ```
 sudo apt update && sudo apt upgrade
-sudo apt install nano 
+sudo apt install nano build-essential gcc
 ```
 
 ### Install Go
