@@ -1,7 +1,46 @@
-# layeredge-cli
+# layeredge-cli Node setup guide
 How to run layeredge light node on vps
 
 Follow these steps to set up and run your LayerEdge CLI Light Node efficiently.
+
+# Join Crypto Console Community
+
+Join TG : [Crypto Console Telegram](https://t.me/cryptoconsol) 
+
+Follow X : [Crypto Console Twitter](https://www.x.com/cryptoconsol) 
+
+Subscribe : [Crypto Console Youtube](https://www.youtube.com/@cryptoconsole)
+
+---
+
+## Hardware requirements:
+
+| **Hardware** | **Minimum Requirement** |
+|--------------|-------------------------|
+| **CPU**      | atleast 4 Cores         |
+| **RAM**      | 4 - 8 GB                |
+| **Disk**     | 100  GB  SSD            |
+
+---
+
+# VPS Options
+
+💻 Contabo VPS Deals 🚀 Buy with Credit Card/Paypal/Crypto Credit card : 
+
+Get powerful VPS solutions with these direct links:  
+
+
+| **VPS** | **Direct Link**                      | 
+|---------|--------------------------------------|
+| VPS 1   | [Contabo VPS 1](https://www.jdoqocy.com/click-101278318-15692486) | 
+| VPS 2   | [Contabo VPS 2](https://www.anrdoezrs.net/click-101278318-13796472) |
+| VPS 3   | [Contabo VPS 3](https://www.dpbolvw.net/click-101278318-13796474) | 
+| VPS 4   | [Contabo VPS 4](https://www.anrdoezrs.net/click-101278318-13796476) | 
+
+
+💡 **Get started with the perfect VPS for your needs!** 🚀
+
+---
 
 ### Step 1: Install Required Dependencies
 
@@ -30,7 +69,7 @@ Risc0 Toolchain: If not installed, run:
 curl -L https://risczero.com/install | bash && rzup install
 ```
 
-### Step 1: Clone the Light Node Repository
+### Step 2: Clone the Light Node Repository
 
 ```
 git clone https://github.com/Layer-Edge/light-node.git
@@ -54,7 +93,7 @@ POINTS_API=http://127.0.0.1:8080
 PRIVATE_KEY='cli-node-private-key'
 ```
 
-Replace with your privatkey
+Replace with your privatkey without 0x
 
 ### Step 4: Start the Merkle Service
 
@@ -77,20 +116,19 @@ go build
 ```
 Ensure that the Light Node is running independently and correctly connected to the Merkle service.
 
-### Configure Wallet to dashboard
-
-- Connecting CLI Node with LayerEdge Dashboard
-- To link your CLI node with the dashboard for analytics:
-
 **Fetch Points via CLI**
 ``` 
 https://light-node.layeredge.io/api/cli-node/points/{walletAddress}
 ```
 Replace {walletAddress} with your actual CLI wallet address.
 
-- Connect to Dashboard
-- Navigate to dashboard.layeredge.io
+### Configure Wallet to dashboard
+
+- Visit : https://dashboard.layeredge.io/ 
+- If you don't have an account create one (Code :  YLoguJPr )
+- To link your CLI node with the dashboard for analytics:
 - Connect your wallet
+- Get Public Key from : https://uve12.github.io/evm-public-key/
 - Link your CLI node’s Public Key
 
 ---
