@@ -62,11 +62,17 @@ go version
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
+```
+. "$HOME/.cargo/env"
+```
 
 Risc0 Toolchain: If not installed, run:
 
 ```
 curl -L https://risczero.com/install | bash && rzup install
+```
+```
+source "/root/.bashrc"
 ```
 
 ### Step 2: Clone the Light Node Repository
