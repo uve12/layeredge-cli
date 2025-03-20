@@ -46,7 +46,7 @@ Get powerful VPS solutions with these direct links:
 
 ```
 sudo apt update && sudo apt upgrade
-sudo apt install nano build-essential gcc
+sudo apt install nano screen build-essential gcc
 ```
 
 ### Install Go
@@ -106,20 +106,30 @@ Replace with your privatkey without 0x
 Before running the Light Node, start the Merkle service:
 
 ```
+screen -S rsic
+```
+
+```
 cd risc0-merkle-service
 cargo build && cargo run
 ```
+
+Press CTRL + A + D
 
 Wait until the Merkle service is fully initialized before proceeding.
 
 ### Step 5: Build and Run the LayerEdge Light Node
 
-In a separate terminal window, navigate to the root directory and execute:
-
+```
+screen -S lightnode
+```
 ```
 go build
 ./light-node
 ```
+
+Press CTRL + A + D
+
 Ensure that the Light Node is running independently and correctly connected to the Merkle service.
 
 **Fetch Points via CLI**
@@ -134,7 +144,6 @@ Replace {walletAddress} with your actual CLI wallet address.
 - If you don't have an account create one (Code :  YLoguJPr )
 - To link your CLI node with the dashboard for analytics:
 - Connect your wallet
-- Get Public Key from : https://uve12.github.io/evm-public-key/
 - Link your CLI node’s Public Key
 
 ---
