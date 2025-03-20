@@ -130,6 +130,44 @@ go build
 
 Press CTRL + A + D
 
+### create service file for automation
+
+```
+sudo nano /etc/systemd/system/lightnode.service
+```
+```
+[Unit]
+Description=LayerEdge Light Node
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/root/light-node
+ExecStart=/root/light-node/light-node
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+EnvironmentFile=/root/light-node/.env
+
+[Install]
+WantedBy=multi-user.target
+```
+
+
+```
+sudo systemctl daemon-reload
+sudo systemctl enable lightnode.service
+sudo systemctl start lightnode.service
+sudo systemctl status lightnode.service
+```
+
+**check logs**
+
+```
+sudo journalctl -fu lightnode.service
+```
+
 Ensure that the Light Node is running independently and correctly connected to the Merkle service.
 
 **Fetch Points via CLI**
