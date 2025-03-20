@@ -69,7 +69,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 Risc0 Toolchain: If not installed, run:
 
 ```
-curl -L https://risczero.com/install | bash && rzup install
+curl -L https://risczero.com/install | bash
+rzup install
+
 ```
 ```
 source "/root/.bashrc"
