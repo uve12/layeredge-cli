@@ -42,6 +42,15 @@ Get powerful VPS solutions with these direct links:
 
 ---
 
+### Rerun from here
+
+```
+sudo systemctl stop lightnode.service
+sudo systemctl disable lightnode.service
+rm -rf light-node
+rm -rf /etc/systemd/system/lightnode.service
+```
+
 ### Step 1: Install Required Dependencies
 
 ```
@@ -61,26 +70,28 @@ go version
 ### Install Rust
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
-```
-. "$HOME/.cargo/env"
+source $HOME/.cargo/env
 ```
 
 Risc0 Toolchain: If not installed, run:
 
 ```
-curl -L https://risczero.com/install | bash
+curl -L risczero.com/install | bash
+
+source "/root/.bashrc"
+
 rzup install
 
-```
-```
 source "/root/.bashrc"
+
+sudo apt install cargo
+
 ```
 
 ### Step 2: Clone the Light Node Repository
 
 ```
-git clone https://github.com/Layer-Edge/light-node.git
+git clone https://github.com/Layer-Edge/light-node
 cd light-node
 ```
 
@@ -95,9 +106,9 @@ nano .env
 ```
 GRPC_URL=grpc.testnet.layeredge.io:9090
 CONTRACT_ADDR=cosmos1ufs3tlq4umljk0qfe8k5ya0x6hpavn897u2cnf9k0en9jr7qarqqt56709
-ZK_PROVER_URL=http://127.0.0.1:3001
+ZK_PROVER_URL=https://layeredge.mintair.xyz
 API_REQUEST_TIMEOUT=100
-POINTS_API=light-node.layeredge.io
+POINTS_API=https://light-node.layeredge.io
 PRIVATE_KEY='cli-node-private-key'
 ```
 
@@ -112,7 +123,7 @@ screen -S rsic
 ```
 
 ```
-cd risc0-merkle-service
+cd $HOME/light-node/risc0-merkle-service
 cargo build && cargo run
 ```
 
@@ -126,6 +137,7 @@ Wait until the Merkle service is fully initialized before proceeding.
 screen -S lightnode
 ```
 ```
+cd $HOME/light-node
 go build
 ./light-node
 ```
